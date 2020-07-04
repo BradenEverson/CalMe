@@ -34,7 +34,12 @@ html {
     font-size: 16px;
   }
 }
-
+.main-content {
+    color: #000505;
+}
+.secondary-content {
+    color: #26262c;
+}
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -57,10 +62,40 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+/**{
+    background-color: #38686a;
+  -webkit-animation:colorChange 60s infinite;
+}*/
+.opinionButton{
+    margin:100px;
+    width:200px;
+}
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+@-webkit-keyframes colorChange{
+    10% {
+        background-color: #38686a;
+    }
+    25% {
+        background-color: #187795;
+    }
+    40% {
+        background-color: #a675a1;
+    }
+    55% {
+        background-color: #ee4266;
+    }
+    70% {
+        background-color: #a675a1;
+    }
+    85% {
+        background-color: #187795;
+    }
+    100% {
+        background-color: #38686a;
+    }
 }
 .footer {
   position: absolute;

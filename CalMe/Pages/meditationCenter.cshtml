@@ -1,0 +1,27 @@
+﻿@page
+@model CalMe.meditationCenterModel
+@{
+    ViewData["Title"] = "meditationCenter";
+}
+
+<div id="head" class="justify-content-center">
+    <br />
+    <h2 class="text-center main-content">Welcome To The Meditation Center</h2>
+    <br />
+    <br />
+    <h5 class="text-center secondary-content"><i>We'll curate original meditation practices based on your real time feedback</i></h5>
+</div>
+<br />
+<div id="meditationContent">
+    <h3 id="name"></h3>
+    <br />
+    <h5 id="content"></h5>
+</div>
+<br />
+<div id="hiddenButtons" class="align-items-center text-center">
+    <button id="like" class="btn-success opinionButton">Like</button>
+    <button id="dislike" class="btn-danger opinionButton">Dislike</button>
+</div>
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/meditate.js"></script>

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalMe", "CalMe\CalMe.csproj", "{39FBA02C-7A54-4EB7-8825-54AA7F16F014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalMe", "CalMe\CalMe.csproj", "{39FBA02C-7A54-4EB7-8825-54AA7F16F014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meditation.Core", "Meditation.Core\Meditation.Core.csproj", "{E5781ED9-CC6B-4107-99DC-73DC618FE4C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meditation.Data", "Meditation.Data\Meditation.Data.csproj", "{E2225CFE-DD85-4D81-9359-9287AF63E869}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{39FBA02C-7A54-4EB7-8825-54AA7F16F014}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FBA02C-7A54-4EB7-8825-54AA7F16F014}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FBA02C-7A54-4EB7-8825-54AA7F16F014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5781ED9-CC6B-4107-99DC-73DC618FE4C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5781ED9-CC6B-4107-99DC-73DC618FE4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5781ED9-CC6B-4107-99DC-73DC618FE4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5781ED9-CC6B-4107-99DC-73DC618FE4C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2225CFE-DD85-4D81-9359-9287AF63E869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2225CFE-DD85-4D81-9359-9287AF63E869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2225CFE-DD85-4D81-9359-9287AF63E869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2225CFE-DD85-4D81-9359-9287AF63E869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

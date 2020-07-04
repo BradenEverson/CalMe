@@ -5,8 +5,8 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/MeditationHub").bu
 connection.on("ReceiveMessage", function (meditationName, messageContent) {
     var name = meditationName.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     var content = messageContent.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    document.getElementById("name").innerHTML = name;
-    document.getElementById("content").innerHTML = content;
+    document.getElementById("name").value = name;
+    document.getElementById("content").value = content;
 });
 
 connection.start().then(function () {
@@ -19,7 +19,7 @@ connection.start().then(function () {
 document.getElementById("like").addEventListener("click", function (event) {
     var meditationName = document.getElementById("name").value;
     var messageContent = document.getElementById("content").value;
-    connection.invoke("SendMeditationMetaData", meditationName, messageContent, "true").catch(function (err) {
+    connection.invoke("SendMeditationMetaData", "true").catch(function (err) {
         return console.error(err);
     });
     event.preventDefault();
@@ -27,7 +27,7 @@ document.getElementById("like").addEventListener("click", function (event) {
 document.getElementById("dislike").addEventListener("click", function (event) {
     var meditationName = document.getElementById("name").value;
     var messageContent = document.getElementById("content").value;
-    connection.invoke("SendMeditationMetaData", meditationName, messageContent, "false").catch(function (err) {
+    connection.invoke("SendMeditationMetaData", "false").catch(function (err) {
         return console.error(err);
     });
     event.preventDefault();

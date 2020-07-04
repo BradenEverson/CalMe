@@ -10,6 +10,7 @@ namespace Meditation.Data
         Core.Meditation add(Core.Meditation newMeditation);
         Core.Meditation delete(int id);
         Core.Meditation update(Core.Meditation updatedMeditation);
+        Core.Meditation getById(int id);
         int getCount();
         int Commit();
     }

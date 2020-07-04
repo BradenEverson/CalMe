@@ -20,7 +20,15 @@ namespace Meditation.Data
             idCount++;
             return newMeditation;
         }
-
+        public Core.Meditation getById(int id)
+        {
+            Core.Meditation meditation = meditations.FirstOrDefault(r => r.id == id);
+            if(meditation == null)
+            {
+                return null;
+            }
+            return meditation;
+        }
         public int Commit()
         {
             return 0;

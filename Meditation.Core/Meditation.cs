@@ -10,7 +10,7 @@ namespace Meditation.Core
     {
         breathing,
         yoga,
-        auditory,
+        focus,
         guided,
         mantra
     }
@@ -23,9 +23,10 @@ namespace Meditation.Core
         //Dictionary with key values of meditationTypes, returns a list of meditationSnippet, a class that has a name and content
         private Dictionary<meditationTypes, List<meditationSnippet>> mappedMeditations = new Dictionary<meditationTypes, List<meditationSnippet>>()
         {
-            {meditationTypes.auditory, new List<meditationSnippet>()
+            {meditationTypes.focus, new List<meditationSnippet>()
             {
                 //Meditation snippets for auditory meditation
+                new meditationSnippet("Focal Imagination", "Close your eyes. Think about your favorite <noun>. Imagine every single detail about it. Think about how <adjective> they are, and what you like to do with them, it could be you like to <verb> with it, or maybe how <adverb> it was gone")
             }},
             {meditationTypes.breathing, new List<meditationSnippet>()
             {
@@ -57,7 +58,7 @@ namespace Meditation.Core
         }
         private void generateMeditation()
         {
-            meditationSnippet meditationSnippet = mappedMeditations[meditationType][staticRandom.Instance.Next(0,mappedMeditations[meditationType].Count-1)];
+            meditationSnippet meditationSnippet = mappedMeditations[meditationTypes.focus][staticRandom.Instance.Next(0,mappedMeditations[meditationTypes.focus].Count-1)];
             name = meditationSnippet.name;
             content = extrapolate(meditationSnippet.content);
         }

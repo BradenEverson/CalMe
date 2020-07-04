@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Meditation.Data;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,17 @@ namespace CalMe
 {
     public class MeditationHub : Hub
     {
-        public async Task SendMeditationMetaData(string meditationName, string messageContent, string liked = null)
+        readonly IMeditationData meditations;
+        public MeditationHub(IMeditationData meditations)
         {
-            await Clients.Caller.SendAsync("ReceiveMessage", meditationName, messageContent);
+            this.meditations = meditations;
+        }
+        public async Task SendMeditationMetaData(string liked)
+        {
+            Console.WriteLine(liked);
+            meditations.getById(meditations.getCount() - 1).wasLiked = bool.Parse(liked);
+            Meditation.Core.Meditation meditation = new Meditation.Core.Meditation();
+            await Clients.Caller.SendAsync("ReceiveMessage", meditation.name, meditation.content);
         }
     }
 }

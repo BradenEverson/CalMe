@@ -1,0 +1,11 @@
+C:\Users\brade\source\repos\CalMe\Meditation.Data\bin\Debug\netcoreapp3.1\Meditation.Data.deps.json
+C:\Users\brade\source\repos\CalMe\Meditation.Data\bin\Debug\netcoreapp3.1\Meditation.Data.dll
+C:\Users\brade\source\repos\CalMe\Meditation.Data\bin\Debug\netcoreapp3.1\Meditation.Data.pdb
+C:\Users\brade\source\repos\CalMe\Meditation.Data\bin\Debug\netcoreapp3.1\Meditation.Core.dll
+C:\Users\brade\source\repos\CalMe\Meditation.Data\bin\Debug\netcoreapp3.1\Meditation.Core.pdb
+C:\Users\brade\source\repos\CalMe\Meditation.Data\obj\Debug\netcoreapp3.1\Meditation.Data.csprojAssemblyReference.cache
+C:\Users\brade\source\repos\CalMe\Meditation.Data\obj\Debug\netcoreapp3.1\Meditation.Data.AssemblyInfoInputs.cache
+C:\Users\brade\source\repos\CalMe\Meditation.Data\obj\Debug\netcoreapp3.1\Meditation.Data.AssemblyInfo.cs
+C:\Users\brade\source\repos\CalMe\Meditation.Data\obj\Debug\netcoreapp3.1\Meditation.Data.csproj.CopyComplete
+C:\Users\brade\source\repos\CalMe\Meditation.Data\obj\Debug\netcoreapp3.1\Meditation.Data.dll
+C:\Users\brade\source\repos\CalMe\Meditation.Data\obj\Debug\netcoreapp3.1\Meditation.Data.pdb

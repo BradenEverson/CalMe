@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Meditation.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Meditation.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Meditation.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Meditation.Core/1.0.0": {
+      "type": "project",
+      "path": "../Meditation.Core/Meditation.Core.csproj",
+      "msbuildProject": "../Meditation.Core/Meditation.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Meditation.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\brade\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\brade\\source\\repos\\CalMe\\Meditation.Core\\Meditation.Core.csproj": {
+              "projectPath": "C:\\Users\\brade\\source\\repos\\CalMe\\Meditation.Core\\Meditation.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -108,3 +108,7 @@ C:\Users\brade\source\repos\CalMe\CalMe\obj\Debug\netcoreapp3.1\CalMe.dll
 C:\Users\brade\source\repos\CalMe\CalMe\obj\Debug\netcoreapp3.1\CalMe.pdb
 C:\Users\brade\source\repos\CalMe\CalMe\obj\Debug\netcoreapp3.1\Razor\Pages\meditationCenter.cshtml.g.cs
 C:\Users\brade\source\repos\CalMe\CalMe\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\brade\source\repos\CalMe\CalMe\bin\Debug\netcoreapp3.1\Meditation.Core.dll
+C:\Users\brade\source\repos\CalMe\CalMe\bin\Debug\netcoreapp3.1\Meditation.Data.dll
+C:\Users\brade\source\repos\CalMe\CalMe\bin\Debug\netcoreapp3.1\Meditation.Core.pdb
+C:\Users\brade\source\repos\CalMe\CalMe\bin\Debug\netcoreapp3.1\Meditation.Data.pdb

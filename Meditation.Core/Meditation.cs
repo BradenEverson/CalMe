@@ -48,6 +48,7 @@ namespace Meditation.Core
         public string name { get; set; }
         public string content { get; set; }
         public meditationTypes meditationType { get; }
+        public int id { get; set; }
         public bool wasLiked { get; set; }
         public Meditation()
         {

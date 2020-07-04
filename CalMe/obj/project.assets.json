@@ -1797,6 +1797,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Meditation.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Meditation.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Meditation.Core.dll": {}
+        }
+      },
+      "Meditation.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Meditation.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Meditation.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Meditation.Data.dll": {}
+        }
       }
     }
   },
@@ -6063,10 +6086,22 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Meditation.Core/1.0.0": {
+      "type": "project",
+      "path": "../Meditation.Core/Meditation.Core.csproj",
+      "msbuildProject": "../Meditation.Core/Meditation.Core.csproj"
+    },
+    "Meditation.Data/1.0.0": {
+      "type": "project",
+      "path": "../Meditation.Data/Meditation.Data.csproj",
+      "msbuildProject": "../Meditation.Data/Meditation.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Meditation.Core >= 1.0.0",
+      "Meditation.Data >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3"
     ]
   },
@@ -6103,7 +6138,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\brade\\source\\repos\\CalMe\\Meditation.Core\\Meditation.Core.csproj": {
+              "projectPath": "C:\\Users\\brade\\source\\repos\\CalMe\\Meditation.Core\\Meditation.Core.csproj"
+            },
+            "C:\\Users\\brade\\source\\repos\\CalMe\\Meditation.Data\\Meditation.Data.csproj": {
+              "projectPath": "C:\\Users\\brade\\source\\repos\\CalMe\\Meditation.Data\\Meditation.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

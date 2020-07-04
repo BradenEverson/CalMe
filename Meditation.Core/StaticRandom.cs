@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CalMe
+namespace Meditation.Core
 {
     public static class staticRandom
     {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Meditation.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +26,7 @@ namespace CalMe
         {
             services.AddRazorPages();
             services.AddSignalR();
+            services.AddSingleton<IMeditationData,InMemoryMeditationDb>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

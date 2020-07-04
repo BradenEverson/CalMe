@@ -13,14 +13,14 @@
 </div>
 <br />
 <div id="meditationContent">
-    <h3 id="name"></h3>
+    <h3 id="name">@Model.newMeditation.name</h3>
     <br />
-    <h5 id="content"></h5>
+    <h5 id="content">@Model.newMeditation.content</h5>
 </div>
 <br />
 <div id="hiddenButtons" class="align-items-center text-center">
-    <button id="like" class="btn-success opinionButton">Like</button>
-    <button id="dislike" class="btn-danger opinionButton">Dislike</button>
+    <button id="like" class="btn btn-success opinionButton">Like</button>
+    <button id="dislike" class="btn btn-danger opinionButton">Dislike</button>
 </div>
 
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>

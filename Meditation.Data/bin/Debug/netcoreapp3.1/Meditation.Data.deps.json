@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Meditation.Data/1.0.0": {
+        "dependencies": {
+          "Meditation.Core": "1.0.0"
+        },
+        "runtime": {
+          "Meditation.Data.dll": {}
+        }
+      },
+      "Meditation.Core/1.0.0": {
+        "runtime": {
+          "Meditation.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Meditation.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Meditation.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

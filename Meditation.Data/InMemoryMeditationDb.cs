@@ -13,7 +13,6 @@ namespace Meditation.Data
         {
             {meditationTypes.breathing, 0.0 },
             {meditationTypes.focus, 0.0 },
-            {meditationTypes.guided, 0.0 },
             {meditationTypes.mantra, 0.0 },
             {meditationTypes.yoga, 0.0 }
         };
@@ -21,16 +20,16 @@ namespace Meditation.Data
         {
             if (positive)
             {
-                if(ratings[target] < 0.99)
+                if(ratings[target] > 0.00)
                 {
-                    ratings[target] += 0.01;
+                    ratings[target] -= 0.01;
                 }
             }
             else
             {
-                if(ratings[target] > 0.00)
+                if(ratings[target] < 0.99)
                 {
-                    ratings[target] -= 0.01;
+                    ratings[target] += 0.01;
                 }
             }
         }
@@ -48,7 +47,7 @@ namespace Meditation.Data
         }
         public Core.Meditation CreateNew()
         {
-            List<meditationTypes> meditationTypesAccepted = ratings.Where(r => r.Value <= staticRandom.Instance.NextDouble()).Cast<meditationTypes>().ToList();
+            List<meditationTypes> meditationTypesAccepted = ratings.Keys.Where(r => ratings[r] <= staticRandom.Instance.NextDouble()).ToList();
             meditationTypes selectedMeditation;
             if(meditationTypesAccepted != null)
             {

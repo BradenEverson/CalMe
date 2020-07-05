@@ -5,8 +5,8 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/MeditationHub").bu
 connection.on("ReceiveMessage", function (meditationName, messageContent) {
     var name = meditationName.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     var content = messageContent.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    document.getElementById("name").value = name;
-    document.getElementById("content").value = content;
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("content").innerHTML = content;
 });
 
 connection.start().then(function () {

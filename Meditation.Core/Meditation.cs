@@ -37,7 +37,9 @@ namespace Meditation.Core
             {
                 //Meditation snippets for breathing meditation
                 new meditationSnippet("Box Breathing","Repeat this several times, breathe in from your nose for <num> seconds, hold for <num> seconds, then release from your mouth for <num> seconds"),
-                new meditationSnippet("Counted Breathing","Repeat this <num> times. breathe in, count for a second, then breathe out for 2 seconds. Then breathe in .")
+                new meditationSnippet("Counted Breathing","Repeat this <num> times. breathe in, count for a second, then breathe out for 2 seconds. Then breathe in ."),
+                new meditationSnippet("Breathing mantra","Breathe in, while holding your breath think of the first word that comes to mind, wait <num> seconds, then as exhaling say that word to yourself"),
+                new meditationSnippet("Calming Breath","Make a small circular hole with your mouth, suck the air in and feel the brisk coldness, then exhale through your nose. Repeat this until you notice that you're feeling tired")
             }},
             {meditationTypes.mantra, new List<meditationSnippet>()
             {

@@ -9,6 +9,7 @@ namespace Meditation.Data
     public class InMemoryMeditationDb : IMeditationData
     {
         readonly List<Core.Meditation> meditations;
+        readonly List<meditationTypes> meditationTypeChangeMemory = new List<meditationTypes>();
         public Dictionary<meditationTypes, double> ratings = new Dictionary<meditationTypes, double>()
         {
             {meditationTypes.breathing, 0.0 },
@@ -18,20 +19,26 @@ namespace Meditation.Data
         };
         public void updateDictionary(meditationTypes target, bool positive)
         {
+            int countedBefore = 1 + meditationTypeChangeMemory.Where(r => r == target).Count();
             if (positive)
             {
                 if(ratings[target] > 0.00)
                 {
-                    ratings[target] -= 0.01;
+                    ratings[target] -= 0.1;
                 }
             }
             else
             {
-                if(ratings[target] < 0.99)
+                if(ratings[target] < 0.9)
                 {
-                    ratings[target] += 0.01;
+                    ratings[target] += 0.1 * countedBefore;
                 }
             }
+            foreach(var key in ratings.Keys)
+            {
+                Console.WriteLine(key.ToString() + " " + ratings[key]);
+            }
+            meditationTypeChangeMemory.Add(target);
         }
         private int idCount = 0;
         public InMemoryMeditationDb()

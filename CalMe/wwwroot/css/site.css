@@ -61,14 +61,23 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
-}
-/**{
-    background-color: #38686a;
+  background-color: #38686a;
   -webkit-animation:colorChange 60s infinite;
-}*/
+}
+.buttonPos{
+    -webkit-animation: posButton 60s infinite;
+}
+.buttonNeg{
+    -webkit-animation: negButton 60s infinite;
+}
+.backgroundProp {
+    background-color: #38686a;
+    -webkit-animation: colorChange 60s infinite;
+}
 .opinionButton{
     margin:100px;
     width:200px;
+    height: 75px;
 }
 body {
     /* Margin bottom by footer height */
@@ -95,6 +104,37 @@ body {
     }
     100% {
         background-color: #38686a;
+    }
+}
+@-webkit-keyframes posButton{
+    0% {
+        background-color: #18771C;
+    }
+    25% {
+        background-color: #283618;
+    }
+    50% {
+        background-color: #0A330C;
+    }
+    100% {
+        background-color: #23B82A;
+    }
+}
+@-webkit-keyframes negButton{
+    0% {
+        background-color: #4C0505;
+    }
+
+    25% {
+        background-color: #E51010;
+    }
+
+    50% {
+        background-color: #AB0C0C;
+    }
+
+    100% {
+        background-color: #BD1E1E;
     }
 }
 .footer {

@@ -19,7 +19,7 @@ namespace CalMe
         }
         public void OnGet()
         {
-            newMeditation = new Meditation.Core.Meditation();
+            newMeditation = meditations.CreateNew();
             meditations.add(newMeditation);
         }
     }

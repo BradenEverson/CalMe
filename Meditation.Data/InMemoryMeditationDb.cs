@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Meditation.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,31 @@ namespace Meditation.Data
     public class InMemoryMeditationDb : IMeditationData
     {
         readonly List<Core.Meditation> meditations;
+        public Dictionary<meditationTypes, double> ratings = new Dictionary<meditationTypes, double>()
+        {
+            {meditationTypes.breathing, 0.0 },
+            {meditationTypes.focus, 0.0 },
+            {meditationTypes.guided, 0.0 },
+            {meditationTypes.mantra, 0.0 },
+            {meditationTypes.yoga, 0.0 }
+        };
+        public void updateDictionary(meditationTypes target, bool positive)
+        {
+            if (positive)
+            {
+                if(ratings[target] < 0.99)
+                {
+                    ratings[target] += 0.01;
+                }
+            }
+            else
+            {
+                if(ratings[target] > 0.00)
+                {
+                    ratings[target] -= 0.01;
+                }
+            }
+        }
         private int idCount = 0;
         public InMemoryMeditationDb()
         {
@@ -19,6 +45,21 @@ namespace Meditation.Data
             meditations.Add(newMeditation);
             idCount++;
             return newMeditation;
+        }
+        public Core.Meditation CreateNew()
+        {
+            List<meditationTypes> meditationTypesAccepted = ratings.Where(r => r.Value <= staticRandom.Instance.NextDouble()).Cast<meditationTypes>().ToList();
+            meditationTypes selectedMeditation;
+            if(meditationTypesAccepted != null)
+            {
+                selectedMeditation = meditationTypesAccepted[staticRandom.Instance.Next(0, meditationTypesAccepted.Count() - 1)];
+            }
+            else
+            {
+                selectedMeditation = Enum.GetValues(typeof(meditationTypes)).Cast<meditationTypes>().ToList()[staticRandom.Instance.Next(0, Enum.GetValues(typeof(meditationTypes)).Cast<meditationTypes>().Count() - 1)];
+            }
+            Core.Meditation meditation = new Core.Meditation(selectedMeditation);
+            return meditation;
         }
         public Core.Meditation getById(int id)
         {
